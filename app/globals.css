@@ -1,0 +1,43 @@
+:root {
+  /* Custom CSS Variables for Glassmorphism */
+  --bg-color: rgba(255, 255, 255, 0.1);
+  --blur: 20px;
+  --border-radius: 10px;
+
+  /* Fintech Premium Color Scheme */
+  --purple: #7C3AED;
+  --cyan: #22D3EE;
+}
+
+body {
+  background-color: var(--bg-color);
+  backdrop-filter: blur(var(--blur));
+  color: var(--purple);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: rgba(34, 34, 34, 0.8);
+  color: var(--cyan);
+}
+
+/* Gradient Animations */
+@keyframes gradient-animation {
+  0% {
+    background-color: var(--purple);
+  }
+  50% {
+    background-color: var(--cyan);
+  }
+  100% {
+    background-color: var(--purple);
+  }
+}
+
+.gradient {
+  animation: gradient-animation 5s ease infinite;
+}
+
+/* Tailwind CSS Imports */
+@import 'tailwindcss/tailwind.css';
